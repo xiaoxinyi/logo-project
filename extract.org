@@ -61,7 +61,7 @@ lmdb，因为lmdb的访问速度更快，还支持多进程同时读取。
 
     fea_lmdb = lmdb.open('featureA')
     lmdb_txn = fea_lmdb.begin()
-    lmdb_cursor = txn.cursor()
+    lmdb_cursor = lmdb_txn.cursor()
     features = []
 
     for key, value in lmdb_cursor:
